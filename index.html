@@ -275,9 +275,9 @@
       <p class="speaker-info" style="text-align:center;color:#ff00ff;font-size:1.3em;margin-bottom:30px">Berbagai Event dan Kegiatan DTETI UGM</p>
       <div class="events-grid">
         <div class="event-card" data-event="findit"><h3>🔍 Find IT</h3><p>Kompetisi IT terbesar yang menguji kemampuan problem solving dan inovasi teknologi mahasiswa</p></div>
-        <div class="event-card" data-event="nesco"><h3>🌐 NESCO UGM</h3><p>National Engineering Science Competition - ajang unjuk kemampuan engineering tingkat nasional</p></div>
+        <div class="event-card" data-event="nesco"><h3>⚡ NESCO UGM</h3><p>National Electric Power System Competition - kompetisi sistem tenaga listrik tingkat nasional untuk mahasiswa teknik elektro</p></div>
         <div class="event-card" data-event="technocorner"><h3>💻 Technocorner</h3><p>Festival teknologi tahunan dengan berbagai kompetisi, workshop, dan seminar teknologi</p></div>
-        <div class="event-card" data-event="wisuda"><h3>🎓 Wisuda</h3><p>Momen kelulusan mahasiswa DTETI dengan berbagai pencapaian akademik dan non-akademik</p></div>
+        <div class="event-card" data-event="wisuda"><h3>🎓 Panitia Wisuda</h3><p>Kepanitiaan dalam acara wisuda mahasiswa DTETI dengan tanggung jawab mengorganisir berbagai rangkaian acara kelulusan</p></div>
         <div class="event-card" data-event="openhouse"><h3>🚪 Open House DTETI</h3><p>Kesempatan mengenal lebih dekat program studi, fasilitas, dan kegiatan di DTETI UGM</p></div>
       </div>
     </div>
@@ -667,7 +667,7 @@
         this.vy += this.gravity;
         this.y += this.vy;
         this.x += this.vx;
-        this.vx *= 0.88; // Friction
+        this.vx *= 0.85; // Sedikit kurangi friction untuk gerakan yang lebih fluid
         
         // Batas layar
         if (this.y + this.h > gameCanvas.height) {
@@ -1614,7 +1614,7 @@
       if (Math.abs(deltaX) > Math.abs(deltaY)) {
         // Horizontal swipe
         if (Math.abs(deltaX) > 30) {
-          player.vx = deltaX > 0 ? 6 : -6;
+          player.vx = deltaX > 0 ? 10 : -10; // Lebih responsif untuk mobile
         }
       } else {
         // Vertical swipe or tap
